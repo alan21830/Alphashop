@@ -1,0 +1,12 @@
+com\xantrix\webapp\config\WebApplicationsContextConfig.class
+com\xantrix\webapp\repository\ArticoliRepository.class
+com\xantrix\webapp\config\TelesConfig.class
+com\xantrix\webapp\controller\ArticoliController.class
+com\xantrix\webapp\Service\ArticoliServiceImpl.class
+com\xantrix\webapp\domain\Articoli.class
+com\xantrix\webapp\repository\ArticoliRepositoriImpl.class
+com\xantrix\webapp\Service\ArticoliService.class
+com\xantrix\webapp\repository\ArticoliRepositoriImpl$1.class
+com\xantrix\webapp\config\JdbcConfig.class
+com\xantrix\webapp\controller\IndexController.class
+com\xantrix\webapp\config\DispatcherServletInitialaizer.class
