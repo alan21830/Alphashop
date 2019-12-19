@@ -3,25 +3,29 @@ package com.xantrix.webapp.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Articoli implements Serializable{
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class Articoli implements Serializable
+{
+	private static final long serialVersionUID = -667971422269719485L;
+	
+	private int riga;
 	private String codArt;
 	private String descrizione;
+	private Double prezzo;
+	private Double prezzoKg;
 	private String um;
 	private String codStat;
 	private int pzCart;
 	private double pesoNetto;
+	private float qtaMag;
 	private int idIva;
 	private String idStatoArt;
 	private Date dataCreaz;
 	private int idFamAss;
+	private String desFamAss;
 	
 	public Articoli()
-	{}
+	{
+	}
 
 	public String getCodArt() {
 		return codArt;
@@ -102,5 +106,47 @@ public class Articoli implements Serializable{
 	public void setIdFamAss(int idFamAss) {
 		this.idFamAss = idFamAss;
 	}
+
+	public int getRiga() {
+		return riga;
+	}
+
+	public void setRiga(int riga) {
+		this.riga = riga;
+	}
+
+	public Double getPrezzo() {
+		return prezzo;
+	}
+
+	public void setPrezzo(Double prezzo) {
+		this.prezzo = prezzo;
+	}
+
+	public Double getPrezzoKg() {
+		return prezzoKg;
+	}
+
+	public void setPrezzoKg(Double prezzoKg) {
+		this.prezzoKg = prezzoKg;
+	}
+
+	public float getQtaMag() {
+		return qtaMag;
+	}
+
+	public void setQtaMag(float qtaMag) {
+		this.qtaMag = qtaMag;
+	}
+
+	public String getDesFamAss() {
+		return desFamAss;
+	}
+
+	public void setDesFamAss(String desFamAss) {
+		this.desFamAss = desFamAss;
+	}
 	
+	
+
 }

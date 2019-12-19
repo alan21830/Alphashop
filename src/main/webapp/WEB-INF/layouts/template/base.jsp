@@ -1,7 +1,7 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%> 
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%> 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
  
 
 <!doctype html>
@@ -40,13 +40,13 @@
         				</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link" href="#">
+        				<a class="nav-link" href="<spring:url value="/articoli/" /> ">
         					<span class="oi oi-box" title="box" aria-hidden="true"></span>
         					Prodotti
         				</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link" href="#">
+        				<a class="nav-link" href="<spring:url value="/articoli/" /> ">
         					<span class="oi oi-bullhorn" title="bullhorn" aria-hidden="true"></span>
         					Promozioni
         				</a>
@@ -66,12 +66,15 @@
       				</li>
     			</ul>
     			
-    			<!-- Search Box -->
-    			<form class="form-inline my-2 my-lg-0" id="search" role="search">
-      				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
-    			</form>
-    			
+    		<!-- Search Box -->
+    		 
+    			 
+    					<form:form class="form-inline my-2 my-lg-0" id="search" role="search" method="GET" action="/Test1/articoli/search">
+		      				<input type="text" onClick="this.select();"  class="form-control mr-sm-2" name="filter" value="${filter}" placeholder="Cerca Articoli">
+		      				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+		    			</form:form>
+    			 
+    			 
     			<!-- dropdown menu -->
     			<div class="dropdown">
     				<button class="btn btn-default dropdown-toggle thumbnail"
@@ -94,7 +97,6 @@
     </nav> 
     
      <tiles:insertAttribute name="content" /> 
-     
      <tiles:insertAttribute name="footer" />  
       
     <!-- Optional JavaScript -->

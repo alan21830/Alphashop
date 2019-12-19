@@ -23,9 +23,8 @@ public class ArticoliRepositoriImpl implements ArticoliRepository{
 	public List<Articoli> SelArticoliByFilter(String Filtro) {
 		//String sql =" select * from articoli where DESCRIZIONE like '"+Filtro+"%'";
 
-		String sql = "EXEC [dbo].[Sp_SelArticoliSVILUPPO] '"+Filtro+"'";
-		
-
+		String sql = "EXEC [dbo].[Sp_SelArticoli] '"+Filtro+"'";
+	 
 		List <Articoli> list= jdbcTemplate.query(sql,new RowMapper<Articoli>()
 		{
 			@Override  
